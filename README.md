@@ -1,2 +1,0 @@
-# krokodil
-all things krokodil
