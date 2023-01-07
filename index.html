@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>African Crocodile</title>
-
 <style type="text/css">
   * {
   box-sizing: border-box;
@@ -21,6 +20,7 @@ header {
   justify-content: space-between;
   padding: 0 2vw;
   background-color: green;
+  color: lightgreen;
   width: 100%;
 }
 
@@ -31,6 +31,56 @@ body {
   background-color: green;
   margin: 0;
   padding: 0;
+}
+
+#slideshow {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+#slideshow .slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  animation: slide 30s infinite;
+}
+
+#slideshow .slides img {
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  45% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  70% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  95% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 
@@ -64,9 +114,10 @@ p {
 footer {
   grid-row: 3;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: centeler;
+  justify-content: flex-end;
   padding: 0 2vw;
+  height: 50px;
   background-color: green;
   width: 100%;
 }
@@ -84,6 +135,14 @@ footer {
     </header>
   <div class="container">
     <main>
+<div id="slideshow">
+  <div class="slides">
+    <img src="https://media.giphy.com/media/HdWBCvat2AlGw/giphy.gif" alt="Crocodile 1">
+    <img src="https://media.giphy.com/media/h5bu0WckXBWmaOAjrP/giphy.gif" alt="Crocodile 2">
+    <img src="https://media.giphy.com/media/pPw59APQnqtb2/giphy-downsized-large.gif" alt="Crocodile 3">
+    <img src="https://media.giphy.com/media/6asQyrVejTsWc/giphy-downsized-large.gif" alt="Crocodile 4">
+  </div>
+</div>
       <h2>Appearance</h2>
       <p>The African crocodile is a large reptile, with adults reaching lengths of up to 16 feet (5 meters) and weighing over 1,000 pounds (450 kg). It has a long, muscular body and a powerful tail, which it uses to propel itself through the water. The African crocodile has a distinctive snout, with a long, narrow jaw and a row of sharp teeth. It has a tough, scaly skin that is covered in scales and bony plates, which provides protection from predators. The color of the African crocodile's skin varies depending on its habitat and can range from dark green to brown to black.</p>
       <p>The African crocodile has four short legs, each with five webbed toes. It has small eyes, which are located near the top of its head, and nostrils that are positioned on top of its snout, which allows it to breathe while the rest of its body is submerged underwater. The African crocodile has a highly developed sense of smell, which it uses to locate prey, and its eyesight is excellent, allowing it to spot potential prey from a distance.</p>
