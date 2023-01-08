@@ -2,118 +2,127 @@
 <html>
 <head>
   <title>African Crocodile</title>
-<style type="text/css">
-  * {
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-.call-to-action {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  background-color: lightyellow;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-}
+    .call-to-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      background-color: lightyellow;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
 
-.call-to-action a {
-  color: blue;
-  text-decoration: underline;
-}
+    .call-to-action a {
+      color: blue;
+      text-decoration: underline;
+    }
 
-.call-to-action button {
-  background-color: green;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-}
+    .call-to-action button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
 
-.call-to-action button:hover {
-  background-color: darkgreen;
-}
+    .call-to-action button:hover {
+      background-color: darkgreen;
+    }
 
+    nav {
+      display: flex;
+      height: 50px;
+      align-items: center;
+    }
 
-nav {
-  display: flex;
-  height: 50px;
-  align-items: center;
-}
-
-header {
-  grid-row: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2vw;
-  background-color: green;
-  color: lightgreen;
-  width: 100%;
-}
-
-
+    header {
+      grid-row: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2vw;
+      background-color: green;
+      color: lightgreen;
+      width: 100%;
+    }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   color: black;
-  background-color: green;
+  background-color: darkgreen;
   margin: 0;
   padding: 0;
+  animation: color-change 20s infinite; 
 }
 
-#slideshow {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-
-#slideshow .slides {
-  display: flex;
-  width: 400%;
-  height: 100%;
-  animation: slide 30s infinite;
-}
-
-#slideshow .slides img {
-  width: 25%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@keyframes slide {
+@keyframes color-change {
   0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-25%);
-  }
-  45% {
-    transform: translateX(-25%);
+    background-color: green;
   }
   50% {
-    transform: translateX(-50%);
-  }
-  70% {
-    transform: translateX(-50%);
-  }
-  75% {
-    transform: translateX(-75%);
-  }
-  95% {
-    transform: translateX(-75%);
+    background-color: blue;
   }
   100% {
-    transform: translateX(-100%);
+    background-color: green;
   }
 }
 
+    #slideshow {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    #slideshow .slides {
+      display: flex;
+      width: 400%;
+      height: 100%;
+      animation: slide 30s infinite;
+    }
+
+    #slideshow .slides img {
+      width: 25%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      20% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-25%);
+      }
+      45% {
+        transform: translateX(-25%);
+      }
+      50% {
+        transform: translateX(-50%);
+      }
+      70% {
+        transform: translateX(-50%);
+      }
+      75% {
+        transform: translateX(-75%);
+      }
+      95% {
+        transform: translateX(-75%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
 
 .container {
   width: 90vw;
@@ -122,11 +131,24 @@ body {
   padding: 2vh;
   background-color: lightgreen;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   color: black;
+  animation: color-change 10s infinite; /* added */
 }
 
+@keyframes color-change {
+  0% {
+    background-color: lightgreen;
+  }
+  50% {
+    background-color: lightblue;
+  }
+  100% {
+    background-color: lightgreen;
+  }
+}
 
 h1 {
   text-align: center;
@@ -145,36 +167,34 @@ p {
 footer {
   grid-row: 3;
   display: flex;
-  align-items: centeler;
+  align-items: center;
   justify-content: flex-end;
   padding: 0 2vw;
   height: 50px;
   background-color: green;
   width: 100%;
 }
-
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header>
-      <div class="logo">African Crocodile</div>
-      <nav>
-        <a href="https://discord.gg/HfUTAn3RUr">Contact</a>
-      </nav>
-    </header>
+  <header>
+    <div class="logo">African Crocodile</div>
+    <nav>
+      <a href="https://discord.gg/HfUTAn3RUr">Contact</a>
+    </nav>
+  </header>
+
   <div class="container">
-    <main>
-<div id="slideshow">
-  <div class="slides">
+  <div id="slideshow">
+    <div class="slides">
     <img src="https://media.giphy.com/media/HdWBCvat2AlGw/giphy.gif" alt="Crocodile 1">
     <img src="https://media.giphy.com/media/h5bu0WckXBWmaOAjrP/giphy.gif" alt="Crocodile 2">
     <img src="https://media.giphy.com/media/pPw59APQnqtb2/giphy-downsized-large.gif" alt="Crocodile 3">
     <img src="https://media.giphy.com/media/6asQyrVejTsWc/giphy-downsized-large.gif" alt="Crocodile 4">
+    </div>
   </div>
-</div>
-      <h2>Appearance</h2>
+    <h1>Welcome to African Crocodile</h1>
       <p>The African crocodile is a large reptile, with adults reaching lengths of up to 16 feet (5 meters) and weighing over 1,000 pounds (450 kg). It has a long, muscular body and a powerful tail, which it uses to propel itself through the water. The African crocodile has a distinctive snout, with a long, narrow jaw and a row of sharp teeth. It has a tough, scaly skin that is covered in scales and bony plates, which provides protection from predators. The color of the African crocodile's skin varies depending on its habitat and can range from dark green to brown to black.</p>
       <p>The African crocodile has four short legs, each with five webbed toes. It has small eyes, which are located near the top of its head, and nostrils that are positioned on top of its snout, which allows it to breathe while the rest of its body is submerged underwater. The African crocodile has a highly developed sense of smell, which it uses to locate prey, and its eyesight is excellent, allowing it to spot potential prey from a distance.</p>
       <h2>Behavior</h2>
