@@ -1,1 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sobek and Pharoah</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .call-to-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      background-color: lightyellow;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .call-to-action a {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .call-to-action button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .call-to-action button:hover {
+      background-color: darkgreen;
+    }
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: green;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: lightgreen;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lightgreen;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: green;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+    header {
+      grid-row: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2vw;
+      background-color: green;
+      color: lightgreen;
+      width: 100%;
+    }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: black;
+  background-color: darkgreen;
+  margin: 0;
+  padding: 0;
+  animation: color-change 20s infinite; 
+}
+
+
+    #slideshow {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    #slideshow .slides {
+      display: flex;
+      width: 400%;
+      height: 100%;
+      animation: slide 30s infinite;
+    }
+
+    #slideshow .slides img {
+      width: 25%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      20% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-25%);
+      }
+      45% {
+        transform: translateX(-25%);
+      }
+      50% {
+        transform: translateX(-50%);
+      }
+      70% {
+        transform: translateX(-50%);
+      }
+      75% {
+        transform: translateX(-75%);
+      }
+      95% {
+        transform: translateX(-75%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+.container {
+  width: 90vw;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2vh;
+  background-color: lightgreen;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: black;
+  animation: color-change 10s infinite; /* added */
+}
+
+@keyframes color-change {
+  0% {
+    background-color: darkgreen;
+  }
+  50% {
+    background-color: green;
+  }
+  100% {
+    background-color: darkgreen;
+  }
+}
+
+@keyframes color-change2 {
+  0% {
+    color: lightgrey;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: lightgrey;
+  }
+}
+
+h1 {
+  Color: White
+  text-align: left;
+  animation: color-change2 20s infinite; 
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  animation: color-change2 20s infinite; 
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  animation: color-change2 20s infinite; 
+}
+
+footer {
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2vw;
+  height: 200px;
+  background-color: green;
+  width: 100%;
+}
+/* Navbar container */
+.footers {
+  overflow: hidden;
+  background-color: darkgreen;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.footers a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+<div class="navbar">
+  <a href="https://krokodil.africa/">Home</a>
+  <a href="https://krokodil.africa/donations/">Donate</a>
+  <div class="dropdown">
+    <button class="dropbtn">More
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Coming Soon</a>
+    </div>
+  </div>
+</div>
+  </header>
+
+<p></p>
+  <div class="container">
+<h1>Sobek and the Pharoah</h1>
+<p>
+The sun beat down mercilessly on the desert sands, but the pharaoh paid no mind to the heat. He stood at the edge of the Nile, his gaze fixed on the distant horizon, where his enemies lay. He was a powerful ruler, feared and respected by his people, but his ambition knew no bounds. He longed to expand his kingdom, to conquer new lands and subjugate new peoples, to make his name remembered for all time.
+</p>
+<p>
+As he stood there, lost in thought, his advisors approached, bowing low before him. "Great pharaoh," one of them said, "we have received word of a powerful ritual that can grant you even greater power and protection."
+</p>
+<p>
+The pharaoh's eyes narrowed. "Tell me more," he said, his voice low and dangerous.
+</p>
+<p>
+The advisor hesitated, but then spoke. "It is said that in ancient times, the pharaohs of old summoned the god Sobek to aid them in their battles and conquests. The ritual is said to be powerful and dangerous, but if performed correctly, it can grant you the power of the Nile itself."
+</p>
+<p>
+The pharaoh considered this for a moment. Sobek, the crocodile god, was known to be fierce and unpredictable, but also powerful and wise. The pharaoh felt a thrill of excitement at the thought of harnessing Sobek's power for himself. "I will perform this ritual," he said, his voice filled with determination.
+</p>
+<p>
+The pharaoh was consumed by thoughts of the ritual, and he immediately began to research the ancient texts that described the ceremony. He spent weeks studying the ancient scrolls, poring over illustrations and incantations, trying to piece together the details of the ritual. He was determined to succeed, no matter the cost.
+</p>
+<p>
+As he studied, the pharaoh came to realize that the ritual was more than just a simple ceremony. It required specific ingredients and a certain alignment of stars and planets. He learned that to be successful, the ritual needed to be performed on the banks of the Nile, under the light of the full moon, and at the precise moment when the stars and planets were aligned in a certain way.
+</p>
+<p>
+Furthermore, the pharaoh also discovers that the ritual could summon not only Sobek but also the spirits of the Nile, the protectors of the river, who were said to possess even greater power and wisdom than Sobek himself. He learned that the ritual required a rare ingredient, a single drop of water from the Nile at the exact moment when the stars and planets were aligned in a certain way, signifying the presence of the Nile spirits.
+</p>
+<p>
+With this new knowledge, the pharaoh set out to gather the ingredients, and prepare for the ritual, with a new sense of purpose. He was determined to succeed in summoning Sobek and the Nile spirits, to make a pact with them, no matter the cost.
+</p>
+<p>
+The pharaoh and his priests began the long and arduous task of preparing for the ritual. They gathered the ingredients required for the ritual, such as rare herbs, precious gems, and even a live crocodile to be sacrificed. They also made sure to choose the right date and time for the ceremony, taking into account the alignment of stars and planets, and the movements of the full moon.
+</p>
+<p>
+The pharaoh and his priests also constructed a grand altar on the banks of the Nile, where the ritual would be performed. They decorated the altar with intricate carvings and hieroglyphs, depicting Sobek and the Nile spirits. They also created powerful incantations and parables that would be recited during the ritual, in order to invoke the god's power and blessings.
+</p>
+<p>
+In addition, the pharaoh also ordered to his architects to construct a grand temple for Sobek near the Nile river, as a symbol of his devotion and to make the god feels more comfortable, this temple was adorned with gold, precious stones, and intricate carvings depicting Sobek, the Nile and the pharaoh himself.
+</p>
+<p>
+The pharaoh also ordered to his army to build a grand statue of Sobek in the center of the kingdom, as a symbol of protection and to show everyone that Sobek was now their protector, this statue was so large it could be seen from miles away.
+</p>
+<p>
+The pharaoh and his priests spent months preparing for the ritual, with the pharaoh becoming more and more obsessed with summoning Sobek and the Nile spirits, and obtaining their power.
+</p>
+<p>
+The day of the ritual had finally arrived. The pharaoh and his priests, dressed in ceremonial robes, gathered on the banks of the Nile, at the site of the grand altar. The people of the kingdom had also come to witness the ritual, standing at a distance, watching in awe and fear.
+</p>
+<p>
+As the pharaoh and his priests began the ritual, they recited the incantations and parables that they had prepared. The chanting grew louder and more intense, and the sky above grew dark and stormy.
+</p>
+<p>
+Suddenly, bolts of lightning struck the altar, and a massive portal opened up in the sky. Through the portal, a host of otherworldly beings emerged, led by Sobek himself, accompanied by the spirits of the Nile.
+</p>
+<p>
+The pharaoh and his priests were awestruck by the power and presence of the gods. They continued to recite the incantations and parables, offering the sacrifices and precious gems to Sobek and the Nile spirits.
+</p>
+<p>
+Sobek was pleased with the offerings and the powerful spell that had been used to summon him and the Nile spirits. He granted the pharaoh's request for protection and power, but also warned that the pharaoh must always honor and worship him, and the Nile spirits, in order to keep the balance of nature.
+</p>
+<p>
+With that, the ritual was complete, and the pharaoh and his priests fell to their knees, in gratitude and respect for the god's power and wisdom.
+</p>
+<p>
+With Sobek and the Nile spirits as his protectors, the pharaoh felt invincible. He led his armies to conquer new lands and subjugate new peoples, expanding his kingdom to unprecedented heights. His enemies trembled before him, and his people praised him as a god-king.
+</p>
+<p>
+The Nile, which had been prone to flooding and droughts, now flowed steadily and bountifully, thanks to the protection of Sobek and the Nile spirits. The crops flourished and the people prospered, and the pharaoh was hailed as a savior and a visionary.
+</p>
+<p>
+But the pharaoh's devotion to Sobek and the Nile spirits was not limited to his military campaigns, He also built grand temples and monuments in honor of the god, and the people of Egypt worshiped and honored them for generations to come. He made sure to carry out annual rituals and sacrifices to Sobek and the Nile spirits, to show his gratitude for their protection.
+</p>
+<p>
+Sobek, pleased with the pharaoh's devotion, continued to protect and guide the pharaoh's kingdom and his people, and the pharaoh felt that his power and influence was absolute.
+</p>
+<p>
+At first, the pharaoh was content with the power and protection that Sobek had granted him. He was pleased with the prosperity and success of his kingdom, and he felt that the ritual had been a great success. But as time went by, Sobek's demands began to increase. He began to demand more and more sacrifices from the pharaoh and his people, in the form of precious gems, gold, and even live animals.
+</p>
+<p>
+The pharaoh, at first, was willing to comply with these demands, for he believed that Sobek's protection was worth the sacrifices. But as the demands grew more and more severe, the pharaoh began to feel the strain on his kingdom and his people. The people of Egypt, once prosperous and content, began to grumble and complain about the pharaoh's demands for sacrifice, for many of them could not afford to give as much as Sobek was asking.
+</p>
+<p>
+The pharaoh, blinded by his desire for power and protection, ignored the complaints of his people, believing that they were not aware of the true cost of their protection. He continued to make the sacrifices, even as they drained the resources of his kingdom and his people.
+</p>
+<p>
+As the kingdom struggled to keep up with Sobek's demands, the pharaoh began to realize that the cost of his ambition was too high, that he had lost sight of the true purpose of the ritual, to maintain balance between mortals and gods. He regrets having summoned Sobek and the Nile spirits, for he realizes that the true cost of his ambition was too high.
+</p>
+<p>
+As the pharaoh's kingdom expanded and his power grew, he became increasingly consumed by his ambition and greed. He was determined to conquer new lands, defeat new enemies, and gain more wealth and prestige. He began to neglect his duties to honor and worship Sobek and the Nile spirits, seeing them only as a means to an end, a tool to be used in his quest for power.
+</p>
+<p>
+He stopped making the annual sacrifices and rituals that were required to maintain the balance between mortals and gods, believing that his kingdom's prosperity and protection were guaranteed by the pact he made with Sobek, even if he stopped worshiping the god.
+</p>
+<p>
+Sobek, angered by the pharaoh's neglect and disrespect, decided to withdraw his protection and guidance, and the Nile spirits began to fade away. The Nile, once a bountiful and life-giving river, began to flood uncontrollably, causing destruction and hardship for the people of Egypt. The crops failed, famine spread, and disease flourished.
+</p>
+<p>
+The pharaoh, finally realizing the error of his ways, begged for Sobek's forgiveness and for the return of his protection, but Sobek, furious with the pharaoh's arrogance and neglect, refused to listen, and the kingdom fell into chaos.
+</p>
+<p>
+With Sobek's protection and guidance gone, the pharaoh's kingdom fell into chaos. The Nile flooded uncontrollably, causing widespread destruction, and the crops failed, leading to famine and disease. The people of Egypt, once loyal and content, turned against the pharaoh, blaming him for the hardships they were suffering.
+</p>
+<p>
+The pharaoh, finally realizing the full extent of his actions and their consequences, was filled with regret. He realized that his ambition and greed had blinded him to the true purpose of the ritual, to maintain balance between mortals and gods. He realized that his pact with Sobek and the Nile spirits was not a guarantee of power and protection, but a responsibility to honor and worship them, and to maintain balance.
+</p>
+<p>
+The pharaoh, in his despair, began to wander the land, alone and shunned by his people. He carried with him his greatest treasure, a small pouch filled with Nile water, the last remaining drop of water from the Nile that still carried the presence of the Nile spirits. He spent his last days visiting the ruins of the temples and monuments he had built for Sobek, praying for forgiveness and redemption, but it was too late.
+</p>
+<p>
+In the end, the pharaoh died alone, his kingdom in ruins, and his name forgotten, a cautionary tale of the consequences of ambition, greed, and neglect. His people, however, continued to remember the wisdom of Sobek and the Nile spirits, and they rebuilt their kingdom on the principles of balance and harmony, honor and worship. They remembered the pharaoh not as a god-king, but as a reminder of the dangers of greed and neglect, and they vowed to never forget the true purpose of their pact with the gods.
+</p>
+<p>
+Despite his passing, the pharaoh's spirit continued to wander the land, in search of redemption and forgiveness. In his wandering, he stumbled upon a small village on the edge of the kingdom, where he met a wise old sage, who taught him the true meaning of balance and harmony, honor and worship.
+</p>
+<p>
+The pharaoh's spirit, humbled and repentant, dedicated himself to serving the people of this village, helping them with their crops and their homes, becoming a protector and a guide for them. He also helped them to rebuild a small temple to Sobek, where they could honor and worship the god and the Nile spirits.
+</p>
+<p>
+As he helped the village, the pharaoh's spirit began to notice that the Nile began to flow more steadily, and the crops began to flourish. The people of the village, who had been struggling to survive, began to prosper, and they praised the pharaoh's spirit as a savior.
+</p>
+<p>
+The pharaoh, filled with remorse and understanding the true meaning of balance and harmony, began to see the effects of his deeds and his redemption, his spirit finally found peace and redemption. He realized that true redemption is not only about asking for forgiveness but also in taking actions to make amends and show a true change of heart.
+</p>
+
+
+</div>
+<p></p>
+</body>
+    <footer>
+      <div class="navbar">
+       <p> <a href="https://discord.gg/HfUTAn3RUr">Contact Us</a> </p>
+       </div>
+    </footer>
+</html>
 
